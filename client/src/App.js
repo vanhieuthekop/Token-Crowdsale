@@ -7,10 +7,7 @@ import React from 'react';
 import AddWhiteList from './components/AddWhitelist';
 import CheckWhitelists from './components/CheckWhitelists';
 import Crowdsale from './components/Crowdsale';
-import Web3 from "web3";
 import "./App.css";
-
-const BN = Web3.utils.BN;
 
 function App() {
   const [web3, setWeb3] = useState(null);

@@ -15,7 +15,9 @@
   "dependencies": {
     "@openzeppelin/contracts": "^4.5.0",
     "chai-as-promised": "^7.1.1",
-    "moment": "^2.29.1"
+    "moment": "^2.29.1",
+    "react-bootstrap": "^2.2.3",
+    "react-router-dom": "^6.3.0"
   },
   "devDependencies": {
     "chai-bn": "^0.3.1"

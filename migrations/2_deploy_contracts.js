@@ -10,7 +10,10 @@ module.exports = async function(deployer) {
   
   try {
     await deployer.deploy(DatingToken, initialTokens, [addresses[0], addresses[1]]);
+    console.log("Deploy Dating Token successfully!");
+
     await deployer.deploy(WhitelistContract);
+    console.log("Deploy Whitelist Contract successfully!");
 
     await deployer.deploy(
       DatingCrowdsale,
@@ -21,9 +24,11 @@ module.exports = async function(deployer) {
       moment().unix(), 
       moment().add(1,"days").unix()
     );
+    console.log("Deploy Crowdsale Contract successfully!");
+
     let instance = await DatingToken.deployed();
-    const amount = (new BN(10000000)).mul((new BN(10)).pow(new BN(18)));
-    await instance.transfer(DatingCrowdsale.address, amount);
+    // const amount = (new BN(10)).mul((new BN(10)).pow(new BN(18)));
+    // await instance.transfer(DatingCrowdsale.address, amount);
   } catch (error) {
     console.log("Deploy error: ", error);
   }

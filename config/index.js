@@ -9,9 +9,9 @@ module.exports = {
       networkId: Number(process.env.GANACHE_NETWORK_ID) || 5777
     },
     ropsten_infura : {
-      mnemonic : process.env.MNEMONIC_TESTNET,
+      mnemonic : process.env.MNEMONIC,
       host: process.env.ROPSTEN_INFURA_HOST,
-      networkId: process.env.ROPSTEN_NETWORK_ID
+      networkId: 3
     }
   }
 }
